@@ -30,7 +30,7 @@ run current release binary
 - **h** - previous directory
 - **/** - open filter
 - **u** - clear filter
-- **q** - close
+- **q/esq** - close
 
 ### Playlist
 - **ctrl+l** - clear
