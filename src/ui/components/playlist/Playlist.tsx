@@ -38,7 +38,7 @@ export const Playlist = (): ReactNode => {
   const filterValue = useFilterStore((state) => state.value)
   const showFilterInput = useFilterStore((state) => state.show)
   const isFilterInputShown = useFilterStore((state) => state.isShown)
-  // const clearFilterInput = useFilterStore((state) => state.clear)
+  const clearFilterInput = useFilterStore((state) => state.clear)
 
   const itemsInViewPort = useMemo(() => window.visualViewport?.height
     ? Math.floor(((window.visualViewport.height || 0) - 100) / ITEMS_HEIGHT)
@@ -307,6 +307,10 @@ export const Playlist = (): ReactNode => {
         callback: showFilterInput,
       },
       {
+        condition: singleKey('KeyU'),
+        callback: clearFilterInput,
+      },
+      {
         condition: singleKey('KeyD'),
         callback: (payload) => {
           if (payload.isRepeated) {
@@ -335,7 +339,7 @@ export const Playlist = (): ReactNode => {
         <Chip value={filterValue} className='bg-gray-700'/>
       </div>
       : <div className='filter-container w-1 transition-[width]'></div>
-  }, [isFilterInputShown])
+  }, [isFilterInputShown, filterValue])
 
   const Files = useMemo((): ReactNode => {
     const items = filteredFiles.slice(

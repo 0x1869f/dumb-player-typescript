@@ -472,6 +472,10 @@ export function FileLoader({
         callback: clearAndExit,
       },
       {
+        condition: singleKey('KeyU'),
+        callback: clearFilterInput,
+      },
+      {
         condition: singleKey('Escape'),
         callback: onExit,
       },
