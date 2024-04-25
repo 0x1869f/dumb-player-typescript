@@ -4,7 +4,7 @@
 Vim-like music player inspired by cmus and ranger.
 
 ## motivation
-Combine cmus and ranger functionality with a nice-looking interface.
+To combine cmus and ranger functionality with a nice-looking interface.
 
 ## installation
 git clone https://github.com/0x1869f/dumb-player  
