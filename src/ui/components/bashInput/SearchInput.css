@@ -1,0 +1,8 @@
+.search-input {
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+
+.search-input::-webkit-scrollbar {
+  display: none;
+}

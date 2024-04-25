@@ -1,0 +1,28 @@
+html {
+  /* cursor: none; */
+  overflow: hidden;
+}
+
+.filter-container {
+  position: fixed;
+  left: 0;
+  bottom: 90px;
+}
+
+input {
+  /* cursor: none; */
+}
+
+button {
+  /* cursor: none; */
+}
+body {
+  margin: 0;
+  user-select: none;
+}
+
+#root {
+  padding: 0;
+  margin: 0;
+}
+
