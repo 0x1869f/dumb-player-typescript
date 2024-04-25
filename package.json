@@ -2,7 +2,7 @@
   "name": "dumb-player",
   "version": "0.0.1",
   "main": "dist-electron/main/index.js",
-  "description": "Vim-like audio player",
+  "description": "Vim-like music player",
   "author": "0x1869f",
   "license": "MIT",
   "private": true,
