@@ -32,6 +32,7 @@ declare global {
       savePlaylist: (
         files: Array<AudioFileWithMetaInfo | AudioFile>
       ) => Promise<void>
+      getHomedir: () => Promise<string>
     }
   }
 }

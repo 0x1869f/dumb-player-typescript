@@ -3,7 +3,7 @@
 /* eslint-disable no-underscore-dangle */
 import type { Socket } from 'node:net'
 import { createServer } from 'node:net'
-import { release } from 'node:os'
+import { release, homedir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -243,6 +243,8 @@ ipcMain.handle(
 )
 
 ipcMain.handle('get-cover', async(_, args) => getCover(args))
+
+ipcMain.handle('get-homedir', async(_, args) => homedir())
 
 ipcMain.handle('notify-next-track', async(_) => {
   // socket.write(args)

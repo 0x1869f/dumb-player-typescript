@@ -21,10 +21,7 @@ contextBridge.exposeInMainWorld('ipcRenderer', withPrototype(ipcRenderer))
 function withPrototype(obj: Record<string, any>) {
   const protos = Object.getPrototypeOf(obj)
 
-  for (const [
-    key,
-    value,
-  ] of Object.entries(protos)) {
+  for (const [key, value] of Object.entries(protos)) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       continue
     }
@@ -45,10 +42,7 @@ function withPrototype(obj: Record<string, any>) {
 }
 
 // --------- Preload scripts loading ---------
-function domReady(condition: Array<DocumentReadyState> = [
-  'complete',
-  'interactive',
-]) {
+function domReady(condition: Array<DocumentReadyState> = ['complete', 'interactive']) {
   return new Promise((resolve) => {
     if (condition.includes(document.readyState)) {
       resolve(true)
@@ -153,6 +147,7 @@ contextBridge.exposeInMainWorld('electron', {
   loadPreferences: async(): Promise<Preferences> => ipcRenderer.invoke('load-preferences'),
   createCacheDir: async(): Promise<void> => ipcRenderer.invoke('create-cache-dir'),
   getCover: async(path: string): Promise<ArrayBuffer | void> => ipcRenderer.invoke('get-cover', path),
+  getHomedir: (): Promise<string> => ipcRenderer.invoke('get-homedir'),
   extractFilesFromDirectories: (files: Array<Directory | AudioFile>): Promise<Array<AudioFileWithMetaInfo>> => ipcRenderer.invoke('extract-files-from-directories', files),
   notifyNextTrack: (path: string) => ipcRenderer.invoke('notify-next-track', path),
   onPauseOrPlay: (callback: () => void) => ipcRenderer.on('pause-or-play', (_event) => {

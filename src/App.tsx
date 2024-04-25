@@ -49,6 +49,7 @@ function App(): ReactNode {
 
   const [isFileLoaderShown, showFileLoader] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [initialPath, setInitalPath] = useState('')
 
   const playerRef = useRef<PlayerRef | null>(null)
 
@@ -95,6 +96,8 @@ function App(): ReactNode {
   }
 
   useEffect(() => {
+    window.electron.getHomedir().then((path: string) => {setInitalPath(path)})
+
     initPreferences()
     const shortcutNotifer = ShortcutNotifier.getInstance()
 
@@ -144,7 +147,7 @@ function App(): ReactNode {
       ? <FileLoader
         onExit={hideFileLoader}
         onFileSelect={onFileSelect}
-        initailPath='/home/x/audio/music'
+        initailPath={initialPath}
       />
       : <Playlist />
   }, [isFileLoaderShown, isLoading])
