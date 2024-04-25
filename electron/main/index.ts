@@ -244,7 +244,7 @@ ipcMain.handle(
 
 ipcMain.handle('get-cover', async(_, args) => getCover(args))
 
-ipcMain.handle('get-homedir', async(_, args) => homedir())
+ipcMain.handle('get-homedir', async(_) => homedir())
 
 ipcMain.handle('notify-next-track', async(_) => {
   // socket.write(args)
