@@ -56,3 +56,19 @@ run current release binary
 - **L** - rewind forward
 - **H** - rewind backward
 
+### Filter
+bash-like navigation
+- **n** - history next
+- **p** - history previous
+- **ctrl+b/arrow left** - cursor back
+- **ctrl+f/arrow right** - cursor forward
+- **ctrl+h/backslash** - remove previous
+- **ctrl+d/delete** - remove next
+- **ctrl+u** - remove to start
+- **ctrl+k** - remove to end
+- **ctrl+y** - paste from buffer
+- **ctrl+w** - remove previous word
+- **ctrl+a** - jump to start
+- **ctrl+e** - jump to end
+- **alt+f/ctrl+arrow right** - jump to next word
+- **alt+b/ctrl+arrow left** - jump to previous word
