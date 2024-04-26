@@ -72,3 +72,7 @@ bash-like navigation
 - **ctrl+e** - jump to end
 - **alt+f/ctrl+arrow right** - jump to next word
 - **alt+b/ctrl+arrow left** - jump to previous word
+- **alt+b/ctrl+arrow left** - jump to previous word
+- **esq** - close without saving
+- **ctrl+c** - clear and close
+- **enter** - save and close
