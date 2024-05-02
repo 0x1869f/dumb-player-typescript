@@ -16,6 +16,9 @@ yarn run build
 run current release binary  
 ./release/0.0.1/linux-unpacked/dumb-player  
 
+## supported formats
+mp3, flac
+
 ## key bindings
 ### File manager
 - **O** - open
@@ -39,6 +42,7 @@ run current release binary
 - **ctrl+b** - jump to previous screen
 - **gg** - jump to start
 - **G** - jump to end
+- **dd** - remove selected
 - **i/enter** - play selected
 - **/** - open filter
 - **u** - clear filter
@@ -76,3 +80,18 @@ bash-like navigation
 - **esq** - close without saving
 - **ctrl+c** - clear and close
 - **enter** - save and close
+
+## remote control
+through unix socket
+check that $XDG_RUNTIME_DIR is set
+
+### example
+echo play-next | ncat -U $XDG_RUNTIME_DIR/dumb-player
+
+### commands
+play-next
+play-previous
+pause-or-play
+increase-volume
+decrease-volume
+
