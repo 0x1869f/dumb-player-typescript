@@ -89,9 +89,9 @@ check that $XDG_RUNTIME_DIR is set
 echo play-next | ncat -U $XDG_RUNTIME_DIR/dumb-player
 
 ### commands
-play-next
-play-previous
-pause-or-play
-increase-volume
-decrease-volume
+play-next  
+play-previous  
+pause-or-play  
+increase-volume  
+decrease-volume  
 
