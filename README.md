@@ -1,4 +1,5 @@
 # WIP
+![usage preview](/media/usage.gif)
 
 ## description
 Vim-like music player inspired by cmus and ranger.
