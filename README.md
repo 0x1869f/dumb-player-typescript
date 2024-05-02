@@ -82,7 +82,7 @@ bash-like navigation
 - **enter** - save and close
 
 ## remote control
-through unix socket
+through unix socket  
 check that $XDG_RUNTIME_DIR is set
 
 ### example
