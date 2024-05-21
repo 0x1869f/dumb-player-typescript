@@ -1,4 +1,4 @@
-# WIP
+# [Moved to](https://github.com/0x1869f/dumb-player)
 ![usage preview](/media/usage.gif)
 
 ## description
